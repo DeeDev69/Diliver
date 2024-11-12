@@ -22,7 +22,7 @@ class LoginPage : AppCompatActivity() {
             finish() // Finish this activity to prevent users from navigating back to it
         }
         binding.loginButtonLogin.setOnClickListener {
-            val intent = Intent(this, LoginPage::class.java)
+            val intent = Intent(this, ChooseLocation::class.java)
             startActivity(intent)
             finish() // Finish this activity to prevent users from navigating back to it
         }
