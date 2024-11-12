@@ -1,3 +1,5 @@
+import org.jetbrains.kotlin.storage.CacheResetOnProcessCanceled.enabled
+
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
@@ -7,6 +9,7 @@ plugins {
 android {
     namespace = "deedev.diliver"
     compileSdk = 35
+
 
     defaultConfig {
         applicationId = "deedev.diliver"
@@ -20,6 +23,7 @@ android {
             useSupportLibrary = true
         }
     }
+
 
     buildTypes {
         release {
@@ -39,7 +43,7 @@ android {
     }
     buildFeatures {
         compose = true
-        viewBinding = true
+        viewBinding=true
         dataBinding = true
     }
 

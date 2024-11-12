@@ -4,13 +4,16 @@ import android.content.Intent
 import android.os.Bundle
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
+import deedev.diliver.databinding.ActivitySignupBinding
 
 class Signup: AppCompatActivity() {
+    private val binding: ActivitySignupBinding by lazy {
+        ActivitySignupBinding.inflate(layoutInflater)
+    }
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_signup)
-        val haveAccText: TextView=findViewById(R.id.haveAccountText)
-        haveAccText.setOnClickListener {
+        setContentView(binding.root)
+        binding.haveAccountText.setOnClickListener {
             val intent= Intent(this,LoginPage::class.java)
             startActivity(intent)
             finish()
