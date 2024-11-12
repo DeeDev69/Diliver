@@ -1,15 +1,26 @@
 package deedev.diliver
 
+import android.content.Intent
 import android.os.Bundle
+import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
+import deedev.diliver.databinding.LoginPageBinding
 
 class LoginPage : AppCompatActivity() {
+
+    private val binding: LoginPageBinding by lazy {
+        LoginPageBinding.inflate(layoutInflater)
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        enableEdgeToEdge()
-        setContentView(R.layout.activity_login_page)
+        setContentView(binding.root)
+
+        binding.noAccountText.setOnClickListener {
+            val intent = Intent(this, Signup::class.java)
+            startActivity(intent)
+            finish()
+        }
     }
 }

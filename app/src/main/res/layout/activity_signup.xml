@@ -34,7 +34,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
         android:fontFamily="@font/alata"
-        android:text="Login to your account."
+        android:text="Signup"
         android:textColor="#5F8E52"
         android:textSize="30sp"
         android:textStyle="bold"
@@ -43,16 +43,16 @@
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <EditText
-        android:id="@+id/editTextEmailLogin"
+        android:id="@+id/editTextNameSignup"
         android:paddingStart="10dp"
         android:layout_width="290dp"
         android:layout_height="50dp"
         android:layout_gravity="center"
         android:layout_marginTop="20dp"
         android:background="@drawable/field_edit_text"
-        android:drawableLeft="@drawable/baseline_email_24"
+        android:drawableLeft="@drawable/baseline_person_24"
         android:fontFamily="@font/viga"
-        android:hint=" Enter Email Address"
+        android:hint=" Enter Name"
         android:textColor="#1B380E"
         android:textColorHint="#9E9B9B"
         app:layout_constraintEnd_toEndOf="@+id/LoginText"
@@ -60,32 +60,60 @@
         app:layout_constraintTop_toBottomOf="@+id/LoginText" />
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/loginButtonLogin"
+        android:id="@+id/loginButtonSignup"
         android:layout_width="150dp"
         android:layout_height="57dp"
         android:layout_marginTop="24dp"
         android:background="@drawable/greenbutton"
         android:gravity="center"
         android:paddingHorizontal="10dp"
-        android:text="Login"
+        android:text="Signup"
+        android:textColor="@color/white"
         android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="@+id/editTextPasswordLogin"
-        app:layout_constraintStart_toStartOf="@+id/editTextPasswordLogin"
-        app:layout_constraintTop_toBottomOf="@+id/editTextPasswordLogin" />
+        app:layout_constraintEnd_toEndOf="@+id/editTextPasswordSignup"
+        app:layout_constraintStart_toStartOf="@+id/editTextPasswordSignup"
+        app:layout_constraintTop_toBottomOf="@+id/editTextPasswordSignup" />
 
-    <TextView
-        android:id="@+id/noAccountText"
+    <ProgressBar
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
-        android:text="Don't have an account? Click here."
+        android:visibility="visible"
+        android:layout_marginTop="3dp"
+        app:layout_constraintEnd_toEndOf="@+id/loginButtonSignup"
+        app:layout_constraintHorizontal_bias="0.487"
+        app:layout_constraintStart_toStartOf="@+id/loginButtonSignup"
+        app:layout_constraintTop_toBottomOf="@+id/loginButtonSignup" />
+
+    <TextView
+        android:id="@+id/haveAccountText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="52dp"
+        android:text="Already have an account? Click here."
         android:textColor="#5F8E52"
-        app:layout_constraintEnd_toEndOf="@+id/loginButtonLogin"
-        app:layout_constraintStart_toStartOf="@+id/loginButtonLogin"
-        app:layout_constraintTop_toBottomOf="@id/loginButtonLogin" />
+        app:layout_constraintEnd_toEndOf="@+id/loginButtonSignup"
+        app:layout_constraintHorizontal_bias="0.448"
+        app:layout_constraintStart_toStartOf="@+id/loginButtonSignup"
+        app:layout_constraintTop_toBottomOf="@id/loginButtonSignup" />
 
     <EditText
-        android:id="@+id/editTextPasswordLogin"
+        android:id="@+id/editTextEmailSignup"
+        android:layout_width="290dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="12dp"
+        android:paddingStart="10dp"
+        android:background="@drawable/field_edit_text"
+        android:drawableLeft="@drawable/baseline_email_24"
+        android:fontFamily="@font/viga"
+        android:hint=" Enter Email"
+        android:textColor="#1B380E"
+        android:textColorHint="#9E9B9B"
+        app:layout_constraintEnd_toEndOf="@+id/editTextNameSignup"
+        app:layout_constraintStart_toStartOf="@+id/editTextNameSignup"
+        app:layout_constraintTop_toBottomOf="@+id/editTextNameSignup" />
+    <EditText
+        android:id="@+id/editTextPasswordSignup"
         android:layout_width="290dp"
         android:layout_height="50dp"
         android:layout_gravity="center"
@@ -97,9 +125,9 @@
         android:hint=" Enter Password"
         android:textColor="#1B380E"
         android:textColorHint="#9E9B9B"
-        app:layout_constraintEnd_toEndOf="@+id/editTextEmailLogin"
-        app:layout_constraintStart_toStartOf="@+id/editTextEmailLogin"
-        app:layout_constraintTop_toBottomOf="@+id/editTextEmailLogin" />
+        app:layout_constraintEnd_toEndOf="@+id/editTextEmailSignup"
+        app:layout_constraintStart_toStartOf="@+id/editTextEmailSignup"
+        app:layout_constraintTop_toBottomOf="@+id/editTextEmailSignup" />
 
 
     <LinearLayout
@@ -107,9 +135,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        app:layout_constraintEnd_toEndOf="@id/noAccountText"
-        app:layout_constraintStart_toStartOf="@id/noAccountText"
-        app:layout_constraintTop_toBottomOf="@+id/noAccountText">
+        app:layout_constraintEnd_toEndOf="@id/haveAccountText"
+        app:layout_constraintStart_toStartOf="@id/haveAccountText"
+        app:layout_constraintTop_toBottomOf="@+id/haveAccountText">
 
         <LinearLayout
             android:id="@+id/line1"
@@ -120,7 +148,7 @@
             android:background="#1D4F1B"
             android:orientation="vertical"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/editTextPasswordLogin" />
+            app:layout_constraintTop_toBottomOf="@id/editTextPasswordSignup" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -138,7 +166,7 @@
             android:layout_marginStart="5dp"
             android:background="#1D4F1B"
             android:orientation="vertical"
-            app:layout_constraintTop_toBottomOf="@id/editTextPasswordLogin" />
+            app:layout_constraintTop_toBottomOf="@id/editTextPasswordSignup" />
 
     </LinearLayout>
 
@@ -149,7 +177,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:fontFamily="@font/viga"
-        android:text="Continue With"
+        android:text="Signup With"
         android:textColor="#5F8E52"
         android:textSize="20sp"
         android:textStyle="bold"
