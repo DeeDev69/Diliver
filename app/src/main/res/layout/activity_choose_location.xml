@@ -24,10 +24,11 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <LinearLayout
+        android:id="@+id/linearLayout"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:layout_marginTop="32dp"
         android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
         android:layout_marginEnd="10dp"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="@+id/chooseLoc"
@@ -50,10 +51,22 @@
         <ImageView
             android:layout_width="46dp"
             android:layout_height="38dp"
-            android:layout_marginStart="-70dp"
             android:layout_gravity="center"
+            android:layout_marginStart="-70dp"
             android:src="@drawable/baseline_arrow_circle_down_24" />
     </LinearLayout>
+
+    <ImageButton
+        android:id="@+id/chooseLocButton"
+        android:layout_width="80dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="44dp"
+        android:foregroundGravity="center"
+        android:src="@drawable/baseline_navigate_next_24"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@drawable/greenbutton"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
 
     <TextView
         android:layout_width="wrap_content"
