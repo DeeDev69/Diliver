@@ -12,7 +12,6 @@ import com.denzcoskun.imageslider.models.SlideModel
 import deedev.diliver.R
 import deedev.diliver.databinding.FragmentHomeBinding
 
-
 class HomeFragment : Fragment() {
     private lateinit var binding: FragmentHomeBinding
 
@@ -25,7 +24,7 @@ class HomeFragment : Fragment() {
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState) // Correct lifecycle call
+        super.onViewCreated(view, savedInstanceState)
 
         // Add images to the slider
         val imageList = ArrayList<SlideModel>()
@@ -40,18 +39,14 @@ class HomeFragment : Fragment() {
 
         imageSlider.setItemClickListener(object : ItemClickListener {
             override fun doubleClick(position: Int) {
-                TODO("Not yet implemented")
+                // Handle double click (optional)
+                Toast.makeText(requireContext(), "Image double-clicked at position: $position", Toast.LENGTH_SHORT).show()
             }
 
             override fun onItemSelected(position: Int) {
-                val itemPosition = imageList[position]
-                val itemMessage= "Selected Image $position"
-                Toast.makeText(requireContext(),itemMessage,Toast.LENGTH_SHORT).show()
+                val itemMessage = "Selected Image at position $position"
+                Toast.makeText(requireContext(), itemMessage, Toast.LENGTH_SHORT).show()
             }
-
         })
-    }
-    companion object {
-
     }
 }
