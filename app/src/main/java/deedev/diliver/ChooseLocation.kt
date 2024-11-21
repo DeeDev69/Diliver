@@ -68,7 +68,7 @@ class ChooseLocation : AppCompatActivity() {
         binding.locationSpinner.adapter = spinnerAdapter
 
         binding.chooseLocButton.setOnClickListener{
-            val intent= Intent(this,LoginPage::class.java)
+            val intent= Intent(this,MainActivity::class.java)
             startActivity(intent)
             finish()
         }
