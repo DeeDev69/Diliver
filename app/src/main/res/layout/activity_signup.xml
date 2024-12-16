@@ -1,257 +1,209 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#d0ffdc">
 
-    <ImageView
-        android:id="@+id/startImage"
-        android:layout_width="204dp"
-        android:layout_height="184dp"
-        android:layout_marginTop="4dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/lodo_diliver__1_"/>
-
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/alata"
-        android:text="Enjoy Dil Se."
-        android:textColor="#5F8E52"
-        android:textSize="40sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/startImage" />
-
-    <TextView
-        android:id="@+id/LoginText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
-        android:fontFamily="@font/alata"
-        android:text="Signup"
-        android:textColor="#5F8E52"
-        android:textSize="30sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@+id/textView"
-        app:layout_constraintStart_toStartOf="@+id/textView"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
-
-    <EditText
-        android:id="@+id/editTextNameSignup"
-        android:paddingStart="10dp"
-        android:layout_width="290dp"
-        android:layout_height="50dp"
-        android:layout_gravity="center"
-        android:layout_marginTop="20dp"
-        android:background="@drawable/field_edit_text"
-        android:drawableLeft="@drawable/baseline_person_24"
-        android:fontFamily="@font/viga"
-        android:hint=" Enter Name"
-        android:textColor="#1B380E"
-        android:textColorHint="#9E9B9B"
-        app:layout_constraintEnd_toEndOf="@+id/LoginText"
-        app:layout_constraintStart_toStartOf="@+id/LoginText"
-        app:layout_constraintTop_toBottomOf="@+id/LoginText" />
-
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/loginButtonSignup"
-        android:layout_width="150dp"
-        android:layout_height="57dp"
-        android:layout_marginTop="24dp"
-        android:background="@drawable/greenbutton"
-        android:gravity="center"
-        android:paddingHorizontal="10dp"
-        android:text="Signup"
-        android:textColor="@color/white"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="@+id/editTextPasswordSignup"
-        app:layout_constraintStart_toStartOf="@+id/editTextPasswordSignup"
-        app:layout_constraintTop_toBottomOf="@+id/editTextPasswordSignup" />
-
-    <ProgressBar
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="3dp"
-        android:visibility="gone"
-        app:layout_constraintEnd_toEndOf="@+id/loginButtonSignup"
-        app:layout_constraintHorizontal_bias="0.487"
-        app:layout_constraintStart_toStartOf="@+id/loginButtonSignup"
-        app:layout_constraintTop_toBottomOf="@+id/loginButtonSignup" />
-
-    <TextView
-        android:id="@+id/haveAccountText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="52dp"
-        android:text="Already have an account? Click here."
-        android:textColor="#5F8E52"
-        app:layout_constraintEnd_toEndOf="@+id/loginButtonSignup"
-        app:layout_constraintHorizontal_bias="0.448"
-        app:layout_constraintStart_toStartOf="@+id/loginButtonSignup"
-        app:layout_constraintTop_toBottomOf="@id/loginButtonSignup" />
-
-    <EditText
-        android:id="@+id/editTextEmailSignup"
-        android:layout_width="290dp"
-        android:layout_height="50dp"
-        android:layout_gravity="center"
-        android:layout_marginTop="12dp"
-        android:paddingStart="10dp"
-        android:background="@drawable/field_edit_text"
-        android:drawableLeft="@drawable/baseline_email_24"
-        android:fontFamily="@font/viga"
-        android:hint=" Enter Email"
-        android:textColor="#1B380E"
-        android:textColorHint="#9E9B9B"
-        app:layout_constraintEnd_toEndOf="@+id/editTextNameSignup"
-        app:layout_constraintStart_toStartOf="@+id/editTextNameSignup"
-        app:layout_constraintTop_toBottomOf="@+id/editTextNameSignup" />
-    <EditText
-        android:id="@+id/editTextPasswordSignup"
-        android:layout_width="290dp"
-        android:layout_height="50dp"
-        android:layout_gravity="center"
-        android:layout_marginTop="12dp"
-        android:paddingStart="10dp"
-        android:background="@drawable/field_edit_text"
-        android:drawableLeft="@drawable/baseline_password_24"
-        android:fontFamily="@font/viga"
-        android:hint=" Enter Password"
-        android:textColor="#1B380E"
-        android:textColorHint="#9E9B9B"
-        app:layout_constraintEnd_toEndOf="@+id/editTextEmailSignup"
-        app:layout_constraintStart_toStartOf="@+id/editTextEmailSignup"
-        app:layout_constraintTop_toBottomOf="@+id/editTextEmailSignup" />
-
-
     <LinearLayout
-        android:id="@+id/line"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        app:layout_constraintEnd_toEndOf="@id/haveAccountText"
-        app:layout_constraintStart_toStartOf="@id/haveAccountText"
-        app:layout_constraintTop_toBottomOf="@+id/haveAccountText">
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:padding="16dp">
 
-        <LinearLayout
-            android:id="@+id/line1"
-            android:layout_width="150dp"
-            android:layout_height="2dp"
-            android:layout_gravity="center"
-            android:layout_marginStart="10dp"
-            android:background="#1D4F1B"
-            android:orientation="vertical"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/editTextPasswordSignup" />
+        <ImageView
+            android:id="@+id/startImage"
+            android:layout_width="204dp"
+            android:layout_height="184dp"
+            android:layout_marginTop="8dp"
+            android:src="@drawable/lodo_diliver__1_" />
 
         <TextView
+            android:id="@+id/textView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="5dp"
-            android:text="or"
-            android:textStyle="bold"
-            android:textColor="@color/black" />
+            android:fontFamily="@font/alata"
+            android:text="Enjoy Dil Se."
+            android:textColor="#5F8E52"
+            android:textSize="40sp"
+            android:layout_marginTop="16dp" />
 
-        <LinearLayout
-            android:id="@+id/line2"
+        <TextView
+            android:id="@+id/LoginText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:fontFamily="@font/alata"
+            android:text="Signup"
+            android:textColor="#5F8E52"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/editTextNameSignup"
+            android:layout_width="290dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/field_edit_text"
+            android:drawableLeft="@drawable/baseline_person_24"
+            android:hint="  Enter Name"
+            android:paddingStart="10dp"
+            android:textColor="#1B380E"
+            android:textColorHint="#9E9B9B"
+            android:fontFamily="@font/viga" />
+
+        <EditText
+            android:id="@+id/editTextEmailSignup"
+            android:layout_width="290dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/field_edit_text"
+            android:drawableLeft="@drawable/baseline_email_24"
+            android:hint="  Enter Email"
+            android:paddingStart="10dp"
+            android:textColor="#1B380E"
+            android:textColorHint="#9E9B9B"
+            android:fontFamily="@font/viga" />
+
+        <EditText
+            android:id="@+id/editTextPasswordSignup"
+            android:layout_width="290dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/field_edit_text"
+            android:drawableLeft="@drawable/baseline_password_24"
+            android:hint="  Enter Password"
+            android:paddingStart="10dp"
+            android:textColor="#1B380E"
+            android:textColorHint="#9E9B9B"
+            android:fontFamily="@font/viga" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/loginButtonSignup"
             android:layout_width="150dp"
-            android:layout_height="2dp"
-            android:layout_gravity="center"
-            android:layout_marginStart="5dp"
-            android:background="#1D4F1B"
-            android:orientation="vertical"
-            app:layout_constraintTop_toBottomOf="@id/editTextPasswordSignup" />
+            android:layout_height="57dp"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/greenbutton"
+            android:gravity="center"
+            android:text="Signup"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
 
-    </LinearLayout>
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:visibility="gone" />
 
-
-    <TextView
-        android:id="@+id/continueWithText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:fontFamily="@font/viga"
-        android:text="Signup With"
-        android:textColor="#5F8E52"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@+id/line"
-        app:layout_constraintStart_toStartOf="@+id/line"
-        app:layout_constraintTop_toBottomOf="@id/line" />
-
-
-    <androidx.cardview.widget.CardView
-        android:layout_width="120dp"
-        android:layout_height="40dp"
-        app:cardCornerRadius="7dp"
-        android:layout_marginTop="12dp"
-        app:cardBackgroundColor="@color/white"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/continueWithText">
+        <TextView
+            android:id="@+id/haveAccountText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="52dp"
+            android:text="Already have an account? Click here."
+            android:textColor="#5F8E52" />
 
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center">
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal"
+            android:gravity="center">
 
-            <ImageView
-                android:layout_width="25dp"
-                android:layout_height="25dp"
-                android:layout_gravity="center_vertical"
-                android:src="@drawable/search" />
+            <View
+                android:layout_width="150dp"
+                android:layout_height="2dp"
+                android:background="#1D4F1B" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical"
-                android:layout_marginStart="4dp"
-                android:text="Google"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:text="or"
                 android:textColor="@color/black"
-                android:textSize="22sp"
                 android:textStyle="bold" />
 
-
+            <View
+                android:layout_width="150dp"
+                android:layout_height="2dp"
+                android:background="#1D4F1B" />
         </LinearLayout>
-    </androidx.cardview.widget.CardView>
-
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
 
         <TextView
-            android:id="@+id/developedCreditStart"
+            android:id="@+id/continueWithText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="5dp"
-            android:fontFamily="@font/alata"
-            android:text="Developed in hunger by "
-            android:textColor="#1D4F1B"
-            android:textSize="15sp"
-            android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/viga"
+            android:text="Signup With"
+            android:textColor="#5F8E52"
+            android:textSize="20sp"
+            android:textStyle="bold" />
 
-        <ImageView
-            android:layout_width="98dp"
-            android:layout_height="28dp"
-            android:src="@drawable/logo_exact_removebg_preview" />
-        <TextView
+        <androidx.cardview.widget.CardView
+            android:layout_width="120dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="12dp"
+            app:cardCornerRadius="7dp"
+            app:cardBackgroundColor="@color/white">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:src="@drawable/search" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:text="Google"
+                    android:textColor="@color/black"
+                    android:textSize="22sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="."
-            android:textStyle="bold"
-            android:textColor="#1D4F1B"
-            android:textSize="15sp"/>
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/developedCreditStart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Developed in hunger by "
+                android:textColor="#1D4F1B"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:layout_width="98dp"
+                android:layout_height="28dp"
+                android:src="@drawable/logo_exact_removebg_preview" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="."
+                android:textColor="#1D4F1B"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
     </LinearLayout>
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
