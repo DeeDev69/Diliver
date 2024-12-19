@@ -5,26 +5,33 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.recyclerview.widget.LinearLayoutManager
 import deedev.diliver.R
+import deedev.diliver.adapter.CartAdapter
+import deedev.diliver.databinding.FragmentCartBinding
 
 
 class CartFragment : Fragment() {
-    // TODO: Rename and change types of parameters
-    private var param1: String? = null
-    private var param2: String? = null
+    private lateinit var binding:FragmentCartBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        arguments?.let {
-        }
+
     }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_cart, container, false)
+        binding = FragmentCartBinding.inflate(inflater, container, false)
+
+        val cartFoodName= listOf("Pizza","Burger","Sandwich","momo")
+        val cartItemPrice= listOf("300Rs.","200Rs.","300Rs.","200Rs.")
+        val cartImage= listOf(R.drawable.pizza_image,R.drawable.burger,R.drawable.sandwich,R.drawable.momo)
+        val adapter= CartAdapter(ArrayList(cartFoodName),ArrayList(cartItemPrice),ArrayList(cartImage))
+        binding.cartRecyclerView.layoutManager= LinearLayoutManager(requireContext())
+        binding.cartRecyclerView.adapter=adapter
+        return binding.root
     }
 
 
