@@ -26,7 +26,7 @@ class CartFragment : Fragment() {
         binding = FragmentCartBinding.inflate(inflater, container, false)
 
         val cartFoodName= listOf("Pizza","Burger","Sandwich","momo")
-        val cartItemPrice= listOf("300Rs.","200Rs.","300Rs.","200Rs.")
+        val cartItemPrice= listOf("300Rs.","100Rs.","70Rs.","200Rs.")
         val cartImage= listOf(R.drawable.pizza_image,R.drawable.burger,R.drawable.sandwich,R.drawable.momo)
         val adapter= CartAdapter(ArrayList(cartFoodName),ArrayList(cartItemPrice),ArrayList(cartImage))
         binding.cartRecyclerView.layoutManager= LinearLayoutManager(requireContext())
